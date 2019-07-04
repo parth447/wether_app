@@ -15,6 +15,7 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialPath)
 
 app.use(express.static(publicDir))
+
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Wether',
@@ -28,7 +29,6 @@ app.get('/help', (req, res) => {
         name: 'Parth'
     })
 })
-
 
 app.get('/about', (req, res) => {
     res.render('about', {
@@ -67,6 +67,7 @@ app.get('*', (req, res) => {
         errorMessage: 'Page not found'
     })
 })
+
 // thats what happend
 app.listen(3000,()=>{
     console.log('server is up on part'+port )
