@@ -8,7 +8,7 @@ const forecast = require('./utils/forecast')
 const publicDir = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialPath = path.join(__dirname, '../templates/partials')
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
@@ -68,6 +68,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is up on part'+port )
 }) 
