@@ -68,7 +68,6 @@ app.get('*', (req, res) => {
     })
 })
 
-// thats what happend
 app.listen(3000,()=>{
     console.log('server is up on part'+port )
 }) 
